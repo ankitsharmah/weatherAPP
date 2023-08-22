@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    /* width: 100vw; */
+    width: 100%;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,#f8fcff, #0e6cca);
+
+    
+
+}
+.container{
+    height: 40vw;
+    outline: 1px solid #1c2130;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vw;
+    border-radius: 10px ;
+    position: relative;
+    /* gap: 0 3rem; */
+}
+
+ .active{
+    filter: blur(7px);
+
+}
+
+.index{
+    z-index: 2;
+}
+
+.flag{
+    /* object-fit: cover; */
+  
+    height: 3vw;
+    width: 3vw;
+    /* border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px; */
+}
+.logos
+{
+    /* outline: 1px solid red; */
+    height: 5vw;
+    /* width: 7vw; */
+   /* object-fit: contain; */
+
+}
+#humidity-logo,#rain-logo{
+height: 5vw;
+
+
+}
+.value{
+
+    font-size: 2vw;
+    color: #5a5555;
+
+}
+
+.viewport{
+    width: 100%;
+    /* outline: 1px solid blue; */
+}
+.viewport h1{
+    text-align: center;
+    font-size: 2.5vw;
+    color: #4f4d4d;
+    text-decoration: underline;
+}
+#custom-search{
+    height:4vw;
+     width:4vw;
+    transition: ease-in-out 300ms;
+
+    }
+ #custom-search:hover{
+    transform: scale(1.12);
+    transition: ease-in-out 300ms;
+
+}
+.MENU-BAR{
+    display: flex;
+    /* outline: 1px solid green; */
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.with-flag{
+    display: flex;
+    align-items: center;
+    gap:0 1rem;
+}
+.place-name{
+    /* outline: 1px solid red; */
+    /* width:15vw; */
+    height: 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    align-items: center;
+}
+.more-info{
+    display: flex;
+
+    /* outline: 1px solid rgb(13, 0, 255); */
+    width: 35vw;
+    height: 8vw;
+    justify-content: space-around;
+}
+.wind,.humidity,.rain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10vw;
+   /* outline: 1px solid red; */
+   align-items: center;
+   background-color: #e3eff4;
+   border-radius: 10px;
+   /* background: linear-gradient(to bottom,#60aae2, #0e6cca); */
+}
+#your-weather{
+    height: 3vw;
+    width: 10vw;
+    font-size: 1.3vw;
+    font-weight: 700;
+    background: none;
+    border: none;
+    color: #0c0b0b;
+    outline: 1px solid #0e6cca;
+    border-radius: 30px;
+    background-color: #0e6cca69;
+    cursor: pointer;
+    /* font-size: 1vw; */
+
+
+}
+#your-weather:hover{
+    opacity: .77;
+}
+#place{
+    font-size: 2.5vw;
+}
+
+.temperature{
+    font-size: 3vw;
+
+}
+
+.Index{
+
+    z-index: -3;
+    outline: 1px solid red;
+}
+
+.custom{
+    position: absolute;
+    /* background-color: #ff0a0a; */
+    /* height: 100vh;
+    width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* z-index: 2; */
+
+}
+#custom-button{
+    width: 10vw;
+    height: 2vw;
+    background: rgba(255, 255, 255, 0.22);
+    border: none;
+    outline:1px solid #ffffff;
+    font-size: 1.5vw;
+    text-align: center;
+    border-radius: 30px;
+
+}
+#custom-button:hover{
+    background: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+}
+span{
+    font-size: 1.5vw;
+}
+input{
+    filter: blur(none);
+    /* z-index: 2; */
+    width:25vw ;
+    height: 3vw;
+    /* padding:1vw 6vw; */
+    font-size: 1.3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    background: rgba(250, 235, 215, 0.635);
+    border-radius: 10px;
+    text-align:left;
+    outline: none;
+    padding-left: 10px;
+    
+}
+
+input:hover{
+    background: rgba(250, 235, 215, 0.77);
+
+}
+
+::-webkit-input-placeholder {
+          color: #2b2a2a;
+        padding-left: 10px;
+      }
+      :-moz-placeholder {
+        padding-left: 10px;
+      }
+     
+
+.back{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3vw;
+    /* z-index: -1; */
+    filter: blur(0);
+    transition: ease-in-out 300ms;
+
+}
+.back:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    right: .5rem;
+    transition: ease-in-out 300ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
