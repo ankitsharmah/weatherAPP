@@ -14,7 +14,10 @@ const tempdisplay=document.querySelector('.temperature');
 const winddisplay=document.querySelector('#Wind');
 const humiddisplay=document.querySelector('#humid');
 const raindisplay=document.querySelector('#rain-data');
+const rainLogo=document.querySelector('#rain-logo');
+
 const yourLocation=document.querySelector('#your-weather');
+// getLocation();
 
 
 const Container=document.querySelector('.container');
@@ -30,10 +33,11 @@ CUSTOMbutton.addEventListener('click',()=>{
 
 })
 
-function toDisplay(p,t,w,h,r,q){
+function toDisplay(p,t,w,h,r,q,i){
   const temp=p;
   PLACE.innerHTML= temp.toUpperCase();
   FLAG.src=`https://flagcdn.com/72x54/${q}.png`;
+  rainLogo.src=`https://api.openweathermap.org/img/w/${i}.png`
   tempdisplay.innerHTML=t;
   winddisplay.innerHTML=w;
   humiddisplay.innerHTML=h;
@@ -88,11 +92,12 @@ async function showPosition(position) {
           let  weatheR=`${data1?.weather['0']?.main} `;
           const Hummid1=`${data1?.main?.humidity} %`;
           const LOC= `${data1?.name}`;
+        const Logo=`${data1?.weather['0']?.icon}`;
          
 
           
           
-          toDisplay(LOC,temperaturE,windSpeeD,Hummid1,weatheR,"in" );
+          toDisplay(LOC,temperaturE,windSpeeD,Hummid1,weatheR,"in",Logo );
     
       } catch (err) {
         console.log(err);
@@ -137,8 +142,9 @@ async function getCustomWeather( x){
         let  weatheR=`${data1?.weather['0']?.main} `;
         const Hummid1=`${data1?.main?.humidity} %`;
         const LOC= `${data1?.name}`;
+        const Logo=`${data1?.weather['0']?.icon}`;
         const flag = `${data1?.sys?.country}`;
-        toDisplay(LOC,temperaturE,windSpeeD,Hummid1,weatheR,flag.toLowerCase());
+        toDisplay(LOC,temperaturE,windSpeeD,Hummid1,weatheR,flag.toLowerCase(),Logo);
   
     } catch (err) {
       alert("sorry not found the place");

@@ -58,11 +58,16 @@
    /* object-fit: contain; */
 
 }
-#humidity-logo,#rain-logo{
+#rain-logo{
 height: 5vw;
-
-
+width: 90%;
 }
+
+#humidity-logo{
+    height: 4vw;
+    width: 50%;
+}
+
 .value{
 
     font-size: 2vw;
@@ -145,6 +150,7 @@ height: 5vw;
     border-radius: 30px;
     background-color: #0e6cca69;
     cursor: pointer;
+    margin-left: 10px;
     /* font-size: 1vw; */
 
 
